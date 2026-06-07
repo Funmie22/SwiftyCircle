@@ -527,7 +527,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { io } from 'socket.io-client';
 
 const tg = window.Telegram?.WebApp;
-const BACKEND_URL = 'http://localhost:5000';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const urlParams = new URLSearchParams(window.location.search);
 const defaultUserId = urlParams.get('user') || '1';
 const defaultName = urlParams.get('name') || (defaultUserId === '2' ? 'Satoshi Osun' : 'Ada Lovelace');
